@@ -25,8 +25,7 @@
 
 - include_tasks: borg-client.yml
   when: >
-    borgbackup_required|bool and
-    inventory_hostname not in borgbackup_servers_group
+    borgbackup_required|bool
 
 - include_tasks: management.yml
   when: >
